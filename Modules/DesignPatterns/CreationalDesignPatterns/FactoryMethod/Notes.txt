@@ -1,0 +1,32 @@
+﻿Product: This is an interface for creating objects. Here, we need to define the Opeartions a Product should have. 
+         In our example, it is the CreditCard interface.
+Concrete Product: This is a class that implements the Product interface. In our example, MoneyBack, Titanium, and Platinum classes are the Concrete Products.
+                  These classes implement the Product interface, i.e. CreditCard.
+Abstract Creator: This is an abstract class and declares the factory method, which returns an object of type Product.
+                  In our example, the CreditCardFactory abstract class has the CreateProduct Factory method, which will create and return an instance of the actual product.
+                  Internally, this CreateProduct method will call the subclass MakeProduct method, creating and returning the appropriate product instance.
+Concrete Creator: These classes implement the Abstract Creator class and override the factory method to return an instance of a Concrete Product.
+
+When to use the Factory Method Design Pattern in C#?
+The Factory Method Design Pattern in C# is particularly suitable in the following scenarios:
+
+Decoupling Object Creation from Its Usage:
+           When your code needs to instantiate classes, but should not depend on the exact classes being instantiated. This pattern allows for more flexibility and loose coupling between the creator and the concrete products.
+Adding Flexibility to Object Creation: 
+           If your application might need to extend its capabilities to create new types of objects in the future, the Factory Method provides a way to do this without modifying existing code.
+Complex Object Creation Logic:
+           When the object creation involves complex logic or dependencies, centralizing this logic in a factory method simplifies maintenance and changes.
+Conditional Object Creation:
+          If the instantiation of an object depends on certain conditions or system state, a factory method can encapsulate these conditions, making the client code simpler and more robust.
+Subclass-Specific Logic:
+          When different subclasses might need to implement different ways of creating objects, the Factory Method allows each subclass to provide a specific implementation of the method.
+Product Contract with a Common Interface:
+          In scenarios where different classes implement a common interface or extend a common base class, your code needs to work with these classes through their common interface.
+Testing and Mocking:
+          The Factory Method pattern is useful in testing scenarios where you might want to replace production objects with mock objects.
+          The pattern allows for easier substitution of different implementations of a product.
+          In the next article, I will discuss the Real-Time Examples of the Factory Method Design Pattern in C#.
+          In this article, I explain the Factory Method Design Pattern in C# step by step with an example.
+          I hope this article will help you with your needs. I would like to have your feedback.
+          Please post feedback, questions, or comments about this article.
+
